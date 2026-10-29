@@ -7,11 +7,6 @@ command = "npm run build"
 node_bundler = "esbuild"
 
 [[redirects]]
-from = "/api/telegram"
-to = "/.netlify/functions/telegram"
-status = 200
-
-[[redirects]]
 from = "/telegram"
 to = "/.netlify/functions/telegram"
 status = 200
