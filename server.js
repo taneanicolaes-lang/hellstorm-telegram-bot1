@@ -27,7 +27,7 @@ const server = http.createServer(async (req, res) => {
           let replyText = '';
 
           if (text.startsWith('/start')) {
-            replyText = 'Привет! Бот Hellstorm успешно запущен и готов к работе!';[span_3](start_span)[span_3](end_span)
+            replyText = 'Привет! Бот Hellstorm успешно запущен и готов к работе!';
           } else if (text.startsWith('/guild')) {
             replyText = '⚔️ Информация об альянсе Hellstorm: экспедиции, активность и координация бойцов.';
           } else if (text.startsWith('/builds')) {
