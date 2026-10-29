@@ -1,7 +1,7 @@
 const http = require('http');
 const { createClient } = require('@supabase/supabase-js');
 
-// Инициализация Supabase (если требуется в боте)
+// Инициализация Supabase
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -19,14 +19,6 @@ const server = http.createServer(async (req, res) => {
       try {
         const update = JSON.parse(body);
         console.log('Received update from Telegram:', update);
-
-        // Проверяем секретный токен безопасности
-        const secretHeader = req.headers['x-telegram-bot-api-secret-token'];
-        if (process.env.TELEGRAM_WEBHOOK_SECRET && secretHeader !== process.env.TELEGRAM_WEBHOOK_SECRET) {
-          res.writeHead(403, { 'Content-Type': 'application/json' });
-          res.end(JSON.stringify({ error: 'Unauthorized' }));
-          return;
-        }
 
         // Пример простейшего ответа на /start
         if (update.message && update.message.text) {
