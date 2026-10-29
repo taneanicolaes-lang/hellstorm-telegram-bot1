@@ -1,0 +1,9 @@
+{
+  "projectId": "72484709",
+  "functions": {
+    "telegram-bot": {
+      "hasChanged": false,
+      "hash": "99125b7e58b894c7d54e881718164b22e26c898f936e06df32ff5ef49e96b4ef"
+    }
+  }
+}

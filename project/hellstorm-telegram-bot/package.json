@@ -1,0 +1,14 @@
+{
+  "name": "hellstorm-castle-battle-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hellstorm — Telegram-игра о битвах замков",
+  "main": "netlify/functions/telegram.js",
+  "scripts": {
+    "build": "node --check netlify/functions/telegram.js",
+    "test": "npm run build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0"
+  }
+}
